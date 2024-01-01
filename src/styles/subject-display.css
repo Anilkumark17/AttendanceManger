@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.display-subject {
+  display: flex;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.subject-container {
+    display: flex;
+    gap:10px ;
+}
+
+.attendancedisplay {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,37 @@
+.createsub-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Subject-creation {
+  width: 300px;
+  height: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #9c89ff;
+}
+.sub-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.subject-details {
+  width: 250px;
+  height: 35px;
+  border: none;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+.submit {
+  background-color: #785dff;
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+  height: 35px;
+}

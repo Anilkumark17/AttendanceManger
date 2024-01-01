@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// import LoginContainer from "./containers/LoginContainer";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import CSubjectContainer from "./containers/Features/CSubjectContainer";
+// import RegistrationContainer from "./containers/RegistrationContainer";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import SDisplayContainer from "./containers/Features/SDisplayContainer";
+import ESContainer from "./containers/Features/ESContainer";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <QueryClientProvider client={queryClient}>
+        <Routes>
+          <Route element={<Home />} path="/home" />
+          <Route element={<ESContainer />} path="/editSubject" />
+          {/* <Route element={<LoginContainer />} path="/" /> */}
+          {/* <Route element={<RegistrationContainer />} path="/registration" /> */}
+          <Route element={<CSubjectContainer />} path="/createsubject" />
+          <Route element={<SDisplayContainer />} path="/" />
+        </Routes>
+
+        <ReactQueryDevtools />
+      </QueryClientProvider>
     </div>
   );
 }
